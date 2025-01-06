@@ -1,5 +1,5 @@
-
-title: MySQL with Python: A Beginner's Guide (Based on Tech With Tim's Video)
+Chapter 5:
+MySQL with Python: Beginner's Guide
 ---
 ## Introduction
 
@@ -13,7 +13,7 @@ title: MySQL with Python: A Beginner's Guide (Based on Tech With Tim's Video)
     * Performing CRUD operations (Create, Read, Update, Delete).
 
 ---
-title: Prerequisites
+## Prerequisites
 
 * **Python Installed:** Make sure you have Python installed on your system.
 * **MySQL Server Installed:** You need a running MySQL server. This could be:
@@ -25,7 +25,7 @@ title: Prerequisites
 * **Basic SQL Knowledge (Optional but helpful):** Understanding of SQL commands like `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
 
 ---
-title: Setting up the Connection
+## Setting up the Connection
 
 * **Import the Connector:**
   ```python
@@ -46,10 +46,9 @@ title: Setting up the Connection
       database="your_database"
   )
   ```
-* **Handle Potential Errors:** Use `try...except` blocks to catch connection errors.
 
 ---
-title: Creating a Cursor Object
+## Creating a Cursor Object
 
 * **What is a Cursor?** A cursor allows you to execute SQL queries and fetch results.
 * **Creating a Cursor:** Use the `cursor()` method of the connection object.
@@ -62,7 +61,7 @@ title: Creating a Cursor Object
   ```
 
 ---
-title: Performing SELECT Queries (Reading Data)
+## Performing SELECT Queries (Reading Data)
 
 * **Executing the SELECT Statement:**
   ```python
@@ -80,80 +79,7 @@ title: Performing SELECT Queries (Reading Data)
   ```
 
 ---
-title: Performing INSERT Queries (Creating Data)
-
-* **Writing the INSERT Statement:**
-  ```python
-  sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-  val = ("Amy", "Apple st 652")
-  ```
-* **Placeholders (%s):**  Used to safely insert values and prevent SQL injection.
-* **Executing the INSERT Statement:**
-  ```python
-  mycursor.execute(sql, val)
-  ```
-* **Committing Changes:**  Crucial to save the changes to the database.
-  ```python
-  mydb.commit()
-  print(mycursor.rowcount, "record inserted.")
-  ```
-
----
-title: Performing UPDATE Queries (Modifying Data)
-
-* **Writing the UPDATE Statement:**
-  ```python
-  sql = "UPDATE customers SET address = %s WHERE address = %s"
-  val = ("Valley 345", "Apple st 652")
-  ```
-* **Specifying the WHERE Clause:**  Important to target the correct rows.
-* **Executing the UPDATE Statement:**
-  ```python
-  mycursor.execute(sql, val)
-  ```
-* **Committing Changes:**
-  ```python
-  mydb.commit()
-  print(mycursor.rowcount, "record(s) affected")
-  ```
-
----
-title: Performing DELETE Queries (Removing Data)
-
-* **Writing the DELETE Statement:**
-  ```python
-  sql = "DELETE FROM customers WHERE address = %s"
-  val = ("Mountain 21",)
-  ```
-* **Specifying the WHERE Clause:** Be careful when deleting data!
-* **Executing the DELETE Statement:**
-  ```python
-  mycursor.execute(sql, val)
-  ```
-* **Committing Changes:**
-  ```python
-  mydb.commit()
-  print(mycursor.rowcount, "record(s) deleted")
-  ```
-
----
-title: Preventing SQL Injection
-
-* **The Danger of String Formatting:** Directly inserting variables into SQL queries can lead to security vulnerabilities.
-  ```python
-  # Avoid this!
-  name = "Robert'); DROP TABLE students; --"
-  mycursor.execute("SELECT * FROM users WHERE name = '" + name + "'")
-  ```
-* **Using Placeholders:**  The `%s` syntax (or `?` for some other database connectors) ensures that values are treated as data, not executable code.
-  ```python
-  sql = "SELECT * FROM users WHERE name = %s"
-  val = (name,)
-  mycursor.execute(sql, val)
-  ```
-
----
-title: Closing the Connection
+## Closing the Connection
 
 * **Importance of Closing:** Releases resources and ensures proper database operation.
 * **Closing the Cursor:**
@@ -178,20 +104,13 @@ title: Closing the Connection
   ```
 
 ---
-title: Key Takeaways
+## Key Takeaways
 
 * **MySQL Connector/Python:** The bridge between your Python code and your MySQL database.
 * **Connection Object:** Represents the connection to the database.
 * **Cursor Object:** Used to execute queries and fetch results.
 * **CRUD Operations:**  Essential for managing data in your database.
-* **SQL Injection:** A critical security concern to be aware of and prevent.
 * **Connection Management:**  Opening and closing connections properly is important.
 
 ---
-title: Further Exploration
 
-* **Error Handling:** Learn more about handling specific database errors.
-* **Transactions:** Understand how to group multiple operations into a single atomic unit.
-* **Advanced SQL:** Explore more complex SQL queries and database features.
-* **Object-Relational Mappers (ORMs):** Consider using libraries like SQLAlchemy or Django ORM for more abstract database interaction.
-* **Tech With Tim's Channel:** Explore other Python and programming tutorials on his channel.
