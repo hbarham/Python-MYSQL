@@ -1,6 +1,6 @@
 
 ---
-title: MySQL with Python: A Beginner's Guide (Based on Tech With Tim's Video)
+MySQL with Python: A Beginner's Guide
 ---
 ## Introduction
 
