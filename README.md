@@ -1,5 +1,3 @@
-
-```
 ---
 title: MySQL with Python: A Beginner's Guide (Based on Tech With Tim's Video)
 ---
@@ -204,15 +202,4 @@ title: Q & A (Refer to the Video for Detailed Explanations)
 * **This presentation is a summary based on Tech With Tim's video.**
 * **For in-depth explanations and demonstrations, please watch the original video:** [https://www.youtube.com/watch?v=91iNR0eG8kE&ab_channel=TechWithTim](https://www.youtube.com/watch?v=91iNR0eG8kE&ab_channel=TechWithTim)
 ```
-**How to Import into Google Slides:**
 
-1. **Copy the entire output above.**
-2. **Open Google Slides.**
-3. **Create a new blank presentation.**
-4. **In the top menu, click on "File" -> "Import slides...".**
-5. **In the import dialog, select the "Upload" tab.**
-6. **Drag and drop the text you copied into the upload area, OR click "Browse" and paste the text into a plain text file (.txt) and upload that file.**
-7. **Google Slides will interpret the `---` as slide separators and the headings as titles and bullet points.**
-8. **You may need to adjust the formatting and layout after importing.**
-
-This output provides a structured outline of the video's content, suitable for a presentation format. Remember to refer to the original video for detailed explanations and code demonstrations.
