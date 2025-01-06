@@ -4,7 +4,6 @@ MySQL with Python: Beginner's Guide
 ## Introduction
 
 * **Topic:** Connecting and interacting with MySQL databases using Python.
-* **Source:**  Tech With Tim's YouTube video: [https://www.youtube.com/watch?v=91iNR0eG8kE&ab_channel=TechWithTim](https://www.youtube.com/watch?v=91iNR0eG8kE&ab_channel=TechWithTim)
 * **Why this is important:** Learn how to build dynamic applications that store and retrieve data.
 * **What you'll learn:**
     * Setting up the necessary environment.
